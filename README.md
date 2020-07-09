@@ -1,2 +1,4 @@
-# Algorithm-By-CSharp
-五毒神掌刷题C#版
+# Algorithm
+五毒神掌刷题练习仓库
+
+> 前两遍用C#，第三遍用TypeScript，第四遍用Java，最后一边用Python
