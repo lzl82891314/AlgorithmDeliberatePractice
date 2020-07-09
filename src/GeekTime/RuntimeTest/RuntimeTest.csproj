@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <StartupObject>RuntimeTest.Program</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Week01\Week01\Week01.csproj" />
+    <ProjectReference Include="..\Week02\Week02.csproj" />
+  </ItemGroup>
+
+</Project>
