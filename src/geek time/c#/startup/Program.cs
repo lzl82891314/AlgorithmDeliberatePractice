@@ -1,5 +1,6 @@
 ﻿using common;
 using System;
+using System.Runtime.InteropServices.ComTypes;
 
 namespace startup {
     class Program {
@@ -35,6 +36,30 @@ namespace startup {
 
             // 11. Container With Most Water
             foo.MaxArea(new int[] { 1, 8, 6, 2, 5, 4, 8, 3, 7 }).Show();
+
+            // 21. Merge Two Sorted Lists
+            var l1 = new ListNode("[1,2,4]");
+            var l2 = new ListNode("[1,3,4]");
+            l1.Show();
+            l2.Show();
+            foo.MergeTwoLists(l1, l2).Show();
+
+            // 206. Reverse Linked List
+            var p = new ListNode("[1,2,3,4,5]");
+            p.Show();
+            foo.ReverseList(p).Show();
+
+            // 141. Linked List Cycle
+            var pp = new ListNode();
+            pp.next = pp;
+            foo.HasCycle(pp).Show();
+
+            // 142. Linked List Cycle II
+            foo.DetectCycle(pp);
+
+            // 25. Reverse Nodes in k-Group
+            var ppp = new ListNode("[1,2,3,4,5]");
+            foo.ReverseKGroup(ppp, 2).Show();
         }
     }
 }

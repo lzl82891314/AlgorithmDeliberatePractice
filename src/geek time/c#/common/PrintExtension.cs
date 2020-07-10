@@ -62,7 +62,7 @@ namespace common {
             var type = obj.GetType();
             if (type == typeof(int) || type == typeof(long) || type == typeof(byte) 
                 || type == typeof(DateTime) || type == typeof(float) || type == typeof(double)
-                || type == typeof(string)) {
+                || type == typeof(string) || type == typeof(bool)) {
                 return true;
             }
             return false;
