@@ -5,6 +5,7 @@ namespace startup {
     class Program {
         static void Main(string[] args) {
             Week01();
+            Console.ReadKey();
         }
 
         static void Week01() {
@@ -31,6 +32,9 @@ namespace startup {
             movePre.Show<int>();
             foo.MoveZeroes(movePre);
             movePre.Show<int>();
+
+            // 11. Container With Most Water
+            foo.MaxArea(new int[] { 1, 8, 6, 2, 5, 4, 8, 3, 7 }).Show();
         }
     }
 }
