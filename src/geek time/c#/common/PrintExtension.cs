@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace startup {
+namespace common {
     public static class PrintExtension {
         public static void Show(this object obj) {
             if (obj.IsSimpleType()) {
@@ -18,6 +18,10 @@ namespace startup {
 
         public static void Show<T>(this IList<T> list) {
             Console.WriteLine(list.GetShowStr());
+        }
+
+        public static void Show(this ListNode node) {
+            Console.WriteLine(node.GetShowStr());
         }
 
         public static string GetShowStr(this IList list) {
@@ -39,6 +43,19 @@ namespace startup {
                 }
             }
             return $"[{s.ToString().TrimEnd(new char[] { ',', ' ' })}]";
+        }
+
+        public static string GetShowStr(this ListNode node) {
+            if (node == null) {
+                return "[Null]";
+            }
+            StringBuilder s = new StringBuilder();
+            var cur = node;
+            while (cur != null) {
+                s.Append($"{cur.val} -> ");
+                cur = cur.next;
+            }
+            return $"[{s.ToString().TrimEnd(new char[] { '-', '>', ' ' })}]";
         }
 
         public static bool IsSimpleType<T>(this T obj) {
