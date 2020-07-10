@@ -11,3 +11,5 @@ function climbStairs(n: number): number {
     }
     return f2;
 }
+
+console.log(climbStairs(10));
