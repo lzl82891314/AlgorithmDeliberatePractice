@@ -58,7 +58,7 @@ namespace startup {
             foo.DetectCycle(pp);
 
             // 25. Reverse Nodes in k-Group
-            var ppp = new ListNode("[1,2,3,4,5]");
+            var ppp = new ListNode("[1,2]");
             foo.ReverseKGroup(ppp, 2).Show();
         }
     }
