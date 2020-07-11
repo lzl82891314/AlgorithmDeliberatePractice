@@ -60,6 +60,13 @@ namespace startup {
             // 25. Reverse Nodes in k-Group
             var ppp = new ListNode("[1,2]");
             foo.ReverseKGroup(ppp, 2).Show();
+
+            // 315. Count of Smaller Numbers After Self
+            var arr = new int[] { 5, 2, 6, 1 };
+            foo.CountSmaller(arr).Show();
+
+            // 941. Valid Mountain Array
+            foo.ValidMountainArray(new int[] { 0, 3, 2, 1 }).Show();
         }
     }
 }
