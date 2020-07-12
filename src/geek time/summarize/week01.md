@@ -81,7 +81,7 @@ Js和Python中的数组其实就是一个Deque，因此不再多说。对于优�
 
 覃超老师在直播中提到的`滴答清单`真的是好东西，我可以用它做一个很完美的计划安排表并且完成相关题目的题解和备注，方便缩短五毒神掌最后一遍的刷题时间。比如下图：
 
-![滴答清单]()
+![滴答清单](https://github.com/lzl82891314/AlgorithmDeliberatePractice/blob/master/src/geek%20time/summarize/resource/WX20200712-171429%402x.png)
 
 我可以很方便的把这些题目进行标注分组和注释。
 
