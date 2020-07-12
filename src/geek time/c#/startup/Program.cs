@@ -67,6 +67,9 @@ namespace startup {
 
             // 941. Valid Mountain Array
             foo.ValidMountainArray(new int[] { 0, 3, 2, 1 }).Show();
+
+            // 299. Bulls and Cows
+            foo.GetHint("1123", "0111").Show();
         }
     }
 }
