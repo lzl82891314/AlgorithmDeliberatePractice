@@ -1,11 +1,12 @@
 ﻿using common;
 using System;
-using System.Runtime.InteropServices.ComTypes;
+using System.Collections;
 
 namespace startup {
     class Program {
         static void Main(string[] args) {
-            Week01();
+            // Week01();
+            Week02();
             Console.ReadKey();
         }
 
@@ -70,6 +71,12 @@ namespace startup {
 
             // 299. Bulls and Cows
             foo.GetHint("1123", "0111").Show();
+        }
+
+        static void Week02() {
+            var foo = new week02.Solution();
+            // 239. Sliding Window Maximum
+            foo.MaxSlidingWindow(new int[] { 1, -1 }, 1).Show<int>();
         }
     }
 }
