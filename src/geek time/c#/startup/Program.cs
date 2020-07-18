@@ -7,7 +7,7 @@ namespace startup {
         static void Main(string[] args) {
             // Week01();
             Week02();
-            Console.ReadKey();
+            // Console.ReadKey();
         }
 
         static void Week01() {
