@@ -76,7 +76,10 @@ namespace startup {
         static void Week02() {
             var foo = new week02.Solution();
             // 239. Sliding Window Maximum
-            foo.MaxSlidingWindow(new int[] { 1, -1 }, 1).Show<int>();
+            // foo.MaxSlidingWindow(new int[] { 1, -1 }, 1).Show<int>();
+
+            // 49. Group Anagrams
+            foo.GroupAnagrams(new string[]{ "eat","tea","tan","ate","nat","bat" });
         }
     }
 }

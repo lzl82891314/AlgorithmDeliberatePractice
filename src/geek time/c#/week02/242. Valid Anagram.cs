@@ -18,7 +18,7 @@ namespace week02 {
             return true;
         }
 
-        public bool IsAnagram_Self(string s, string t) {
+        public bool IsAnagram_BySelf(string s, string t) {
             if (s.Length != t.Length) {
                 return false;
             }
