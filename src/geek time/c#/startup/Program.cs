@@ -1,13 +1,14 @@
 ﻿using common;
 using System;
 using System.Collections;
+using static week03.Solution;
 
 namespace startup {
     class Program {
         static void Main(string[] args) {
             // Week01();
-            Week02();
-            // Console.ReadKey();
+            // Week02();
+            Week03();
         }
 
         static void Week01() {
@@ -80,6 +81,14 @@ namespace startup {
 
             // 49. Group Anagrams
             foo.GroupAnagrams(new string[]{ "eat","tea","tan","ate","nat","bat" });
+        }
+
+        static void Week03() {
+            var foo = new week03.Solution();
+
+            // 98. Validate Binary Search Tree
+            var tree = new TreeNode(2, new TreeNode(1), new TreeNode(3));
+            foo.IsValidBST(tree);
         }
     }
 }
