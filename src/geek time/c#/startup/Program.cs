@@ -96,6 +96,9 @@ namespace startup {
 
             // 18. 4Sum
             foo.FourSum(new int[]{1, 0, -1, 0, -2, 2}, 0);
+
+            // 297. Serialize and Deserialize Binary Tree
+            foo.Serialize(new TreeNode(1, new TreeNode(2), new TreeNode(3, new TreeNode(4), new TreeNode(5)))).Show();
         }
     }
 }
