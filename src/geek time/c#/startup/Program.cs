@@ -88,7 +88,14 @@ namespace startup {
 
             // 98. Validate Binary Search Tree
             var tree = new TreeNode(2, new TreeNode(1), new TreeNode(3));
-            foo.IsValidBST(tree);
+            foo.IsValidBST(tree).Show();
+
+            // 111. Minimum Depth of Binary Tree
+            var tree_111 = new TreeNode(1, new TreeNode(2));
+            foo.MinDepth(tree_111).Show();
+
+            // 18. 4Sum
+            foo.FourSum(new int[]{1, 0, -1, 0, -2, 2}, 0);
         }
     }
 }
