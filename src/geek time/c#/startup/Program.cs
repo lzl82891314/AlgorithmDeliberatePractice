@@ -99,6 +99,18 @@ namespace startup {
 
             // 297. Serialize and Deserialize Binary Tree
             foo.Serialize(new TreeNode(1, new TreeNode(2), new TreeNode(3, new TreeNode(4), new TreeNode(5)))).Show();
+
+            // 77. Combinations
+            foo.Combine(4, 2).Show();
+
+            // 46. Permutations
+            foo.Permute(new int[] {1, 2, 3}).Show();
+
+            // 47. Permutations II
+            foo.PermuteUnique(new int[] {1, 1, 2}).Show();
+
+            // 17. Letter Combinations of a Phone Number
+            foo.LetterCombinations("23").Show();
         }
     }
 }
