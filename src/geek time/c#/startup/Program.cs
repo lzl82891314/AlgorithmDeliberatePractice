@@ -115,7 +115,13 @@ namespace startup {
         }
 
         static void Week04() {
+            var foo = new week04.Solution();
 
+            // 367. Valid Perfect Square
+            foo.IsPerfectSquare(1024).Show();
+
+            // 寻找部分有序数组的分界点
+            foo.FindIndex(new int[] {3, 4, 5, 1, 2}).Show();
         }
     }
 }
