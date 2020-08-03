@@ -122,6 +122,9 @@ namespace startup {
 
             // 寻找部分有序数组的分界点
             foo.FindIndex(new int[] {3, 4, 5, 1, 2}).Show();
+
+            // 127. Word Ladder
+            foo.LadderLength("hit", "cog", new string[] { "hot", "dot", "dog", "lot", "log", "cog" }).Show();
         }
     }
 }
