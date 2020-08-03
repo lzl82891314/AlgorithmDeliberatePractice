@@ -6,7 +6,7 @@ namespace week04 {
             if (nums == null || nums.Length == 0) return 0;
             // nums = [3, 4, 5, 1, 2]
             var left = 0; var right = nums.Length - 1;
-            var leftValue = nums[left]; var rightValue = nums[right];
+            var leftValue = nums[left];
             while (left <= right) {
                 var mid = left + (right - left) / 2;
                 var cur = nums[mid];

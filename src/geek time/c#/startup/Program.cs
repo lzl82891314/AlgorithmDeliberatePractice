@@ -125,6 +125,14 @@ namespace startup {
 
             // 127. Word Ladder
             foo.LadderLength("hit", "cog", new string[] { "hot", "dot", "dog", "lot", "log", "cog" }).Show();
+
+            // 74. Search a 2D Matrix
+            var matrix = new int[][] {
+                new int [] {1, 3, 5, 7},
+                new int [] {10, 11, 16, 20},
+                new int [] {23, 30, 34, 50}
+            };
+            foo.SearchMatrix(matrix, 3).Show();
         }
     }
 }
