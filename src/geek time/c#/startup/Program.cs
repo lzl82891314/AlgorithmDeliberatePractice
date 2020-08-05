@@ -133,6 +133,20 @@ namespace startup {
                 new int [] {23, 30, 34, 50}
             };
             foo.SearchMatrix(matrix, 3).Show();
+
+            // 153. Find Minimum in Rotated Sorted Array
+            foo.FindMin(new int[] { 1 }).Show();
+
+            // 529. Minesweeper
+            var board = new char[][] {
+                new char[] {'E', 'E', 'E', 'E', 'E' },
+                new char[] {'E', 'E', 'M', 'E', 'E' },
+                new char[] {'E', 'E', 'E', 'E', 'E' },
+                new char[] {'1', 'E', 'E', 'E', 'E' },
+            };
+            var click = new int[] { 3, 0 };
+            var result = foo.UpdateBoard(board, click);
+            result.Show<char[]>();
         }
     }
 }
