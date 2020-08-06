@@ -142,7 +142,7 @@ namespace startup {
                 new char[] {'E', 'E', 'E', 'E', 'E' },
                 new char[] {'E', 'E', 'M', 'E', 'E' },
                 new char[] {'E', 'E', 'E', 'E', 'E' },
-                new char[] {'1', 'E', 'E', 'E', 'E' },
+                new char[] {'E', 'E', 'E', 'E', 'E' },
             };
             var click = new int[] { 3, 0 };
             var result = foo.UpdateBoard(board, click);
