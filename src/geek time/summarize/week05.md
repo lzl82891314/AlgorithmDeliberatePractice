@@ -17,3 +17,5 @@
 ## 第一招：入门式
 
 最近有个微博上很火的段子，不知道大家看过没有：
+
+![isEven](https://github.com/lzl82891314/AlgorithmDeliberatePractice/blob/master/src/geek%20time/summarize/resource/isEven.png)
