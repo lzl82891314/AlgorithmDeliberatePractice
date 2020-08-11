@@ -1,6 +1,8 @@
 ﻿using common;
 using System;
 using System.Collections;
+using System.Collections.Generic;
+using week04;
 using static week03.Solution;
 
 namespace startup {
@@ -9,7 +11,9 @@ namespace startup {
             // Week01();
             // Week02();
             // Week03();
-            Week04();
+            // Week04();
+            // Week05();
+            Week06();
         }
 
         static void Week01() {
@@ -147,6 +151,20 @@ namespace startup {
             var click = new int[] { 3, 0 };
             var result = foo.UpdateBoard(board, click);
             result.Show<char[]>();
+
+            // 126. Word Ladder II
+            // foo.FindLadders("hit", "cog", new List<string>() { "hot", "dot", "dog", "lot", "log", "cog" }).Show();
+            new CodeBySlef().FindLadders("hit", "cog", new List<string>() { "hot", "dot", "dog", "lot", "log" }).Show();
+        }
+
+        static void Week05() {
+            var foo = new week05.Solution();
+            foo.LongestCommonSubsequence("oxcpqrsvwf", "shmtulqrypy").Show();
+        }
+
+        static void Week06() {
+            var foo = new week06.Solution();
+            foo.CoinChange(new int[] { 1, 2, 5}, 11).Show();
         }
     }
 }
