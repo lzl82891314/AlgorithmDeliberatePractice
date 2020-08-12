@@ -164,7 +164,22 @@ namespace startup {
 
         static void Week06() {
             var foo = new week06.Solution();
+            // 322. Coin Change
             foo.CoinChange(new int[] { 1, 2, 5}, 11).Show();
+
+            // 1143. Longest Common Subsequence
+            foo.LongestCommonSubsequence("bl", "yby").Show();
+
+            // 剑指 Offer 19. 正则表达式匹配
+            //foo.IsMatch("aaa", "ab*ac*a").Show();
+            //foo.IsMatch("aa", "a").Show();
+            //foo.IsMatch("aa", "a*").Show();
+            //foo.IsMatch("aa", ".*").Show();
+            //foo.IsMatch("aab", "c*a*b").Show();
+            // foo.IsMatch("mississippi", "mis*is*p*.").Show();
+
+            // 213. House Robber II
+            foo.Rob_II(new int[] { 2, 7, 9, 3, 1});
         }
     }
 }
