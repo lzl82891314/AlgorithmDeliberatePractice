@@ -180,6 +180,19 @@ namespace startup {
 
             // 213. House Robber II
             foo.Rob_II(new int[] { 2, 7, 9, 3, 1});
+
+            // 152. Maximum Product Subarray
+            foo.MaxProduct(new int[] { 2, 3, -2, 4 }).Show();
+
+            // 363. Max Sum of Rectangle No Larger Than K
+            //var input = new int[][] {
+            //    new int[] { -1, 0, 3 },
+            //    new int[] { 3, 3, -4 }
+            //};
+            var input = new int[][] {
+                new int[] { 2, 2, -1 },
+            };
+            foo.MaxSumSubmatrix(input, 0).Show();
         }
     }
 }

@@ -24,6 +24,10 @@ namespace common {
             Console.WriteLine(node.GetShowStr());
         }
 
+        public static void Show(this int[,] list) {
+            Console.WriteLine(list.GetShowStr());
+        }
+
         public static string GetShowStr(this IList list) {
             StringBuilder s = new StringBuilder();
             foreach (var item in list) {
@@ -56,6 +60,14 @@ namespace common {
                 cur = cur.next;
             }
             return $"[{s.ToString().TrimEnd(new char[] { '-', '>', ' ' })}]";
+        }
+
+        public static string GetShowStr(this int[,] list) {
+            StringBuilder s = new StringBuilder();
+            foreach (int item in list) {
+                s.Append($"{item}, ");
+            }
+            return $"[{s.ToString().TrimEnd(new char[] { ',', ' ' })}]";
         }
 
         public static bool IsSimpleType<T>(this T obj) {
