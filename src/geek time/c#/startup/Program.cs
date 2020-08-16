@@ -193,6 +193,16 @@ namespace startup {
                 new int[] { 2, 2, -1 },
             };
             foo.MaxSumSubmatrix(input, 0).Show();
+
+            // 221. Maximal Square
+            var charArr = new char[][] {
+               new char[] { '0', '0', '0', '1' },
+               new char[] { '1', '1', '0', '1' },
+               new char[] { '1', '1', '1', '1' },
+               new char[] { '0', '1', '1', '1' },
+               new char[] { '0', '1', '1', '1' },
+            };
+            foo.MaximalSquare(charArr).Show();
         }
     }
 }
