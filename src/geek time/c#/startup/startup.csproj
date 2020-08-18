@@ -13,6 +13,7 @@
     <ProjectReference Include="..\week04\week04.csproj" />
     <ProjectReference Include="..\week05\week05.csproj" />
     <ProjectReference Include="..\week06\week06.csproj" />
+    <ProjectReference Include="..\week07\week07.csproj" />
   </ItemGroup>
 
 </Project>

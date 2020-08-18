@@ -13,7 +13,8 @@ namespace startup {
             // Week03();
             // Week04();
             // Week05();
-            Week06();
+            // Week06();
+            Week07();
         }
 
         static void Week01() {
@@ -203,6 +204,13 @@ namespace startup {
                new char[] { '0', '1', '1', '1' },
             };
             foo.MaximalSquare(charArr).Show();
+        }
+
+        static void Week07() {
+            var foo = new week07.Solution();
+
+            // 212. Word Search II
+            foo.FindWords(null, null).Show();
         }
     }
 }
