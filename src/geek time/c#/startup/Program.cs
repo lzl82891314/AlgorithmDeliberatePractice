@@ -210,7 +210,11 @@ namespace startup {
             var foo = new week07.Solution();
 
             // 212. Word Search II
-            foo.FindWords(null, null).Show();
+            var board = new char[2][] {
+                new char[] { 'a', 'b'},
+                new char[] { 'a', 'a' }
+            };
+            foo.FindWords(board, new string[] { "aba","baa","bab","aaab","aaa","aaaa","aaba"}).Show();
         }
     }
 }
