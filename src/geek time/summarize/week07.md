@@ -180,6 +180,65 @@ public class UnionFind {
 
 二维矩阵中的曼哈顿距离为： |x1 - x2| + |y1 - y2|
 
+关于双向BFS，可以通过[127. Word Ladder](https://leetcode.com/problems/word-ladder/)来详细说明。这个题中，正常的BFS解法是将beginWord存入一个queue中做BFS，而在双向BFS中，beginWord和endWord可以分别存入哈希表中，然后每次向内逼近，最终计算step即可。解题的伪代码如下：
+
+``` C#
+public int LadderLength(string beginWord, string endWord, IList<string> wordList) {
+    // 初始化资源，包括两个哈希表，一个visited，和一个wordDictionary，以便BFS使用
+    var beginSet = new HashSet<string>() { beginWord };
+    var endSet = new HashSet<string>() { endSet };
+    var visited = new HashSet<string>() { beginWord, endWord };
+    // 对这个dict的初始化省略
+    var dict = new Dictionary<string, List<string>>();
+    var step = 1;
+    while (beginSet.Count != 0 && endSet.Count != 0) {
+        // 双向BFS模板，每次只需要扩散数量小的集合，尽可能地减少扩散数量
+        if (beginSet.Count > endSet.Count) {
+            swap(beginSet, endSet);
+        }
+
+        var nextSet = new HashSet<string>();
+        foreach (var current in beginSet) {
+            for (var i = 0; i < current.Length, i++) {
+                // 计算commonWord
+                var commonWord = getCommonWord(current);
+                var matchedList = dict[commonWord];
+                foreach (var matchedWord in matchedList) {
+                    // 如果另一端集合中存在匹配到的值，则直接返回
+                    if (endSet.Contains(matchedWord)) return step + 1;
+                    // 否则将扩展的值存入beginSet中
+                    nextSet.Add(matchedWord); visited.Add(matchedWord);
+                }
+            }
+        }
+        beginSet = nextSet; step++;
+    }
+    return 0;
+}
+```
+
+通过上个题，可以大概总结一下双端BFS的代码模板：
+
+``` C#
+public void DoubleEndedBFS(string start, string end) {
+    var startSet = new HashSet<string>() { start };
+    var endSet = new HashSet<string>() { endSet };
+    var ans = 1;
+    while (startSet.Count != 0 && endSet.Count != 0) {
+        if (startSet.Count > endSet.Count) {
+            swap(startSet, endSet);
+        }
+        var nextSet = new HashSet<string>();
+        foreach (var current in beginSet) {
+            if (endSet.Contains(current)) return ans + 1;
+            nextSet.Add(newCurrent);
+        }
+        ans++;
+        beginSet = nextSet;
+    }
+}
+```
+
 ### 平衡二叉树
 
 平衡二叉树是对二叉搜索树的一种改进，因为二叉搜索树存在一个问题：
