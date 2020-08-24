@@ -15,6 +15,7 @@ namespace startup {
             // Week05();
             // Week06();
             Week07();
+            Week08();
         }
 
         static void Week01() {
@@ -215,6 +216,12 @@ namespace startup {
                 new char[] { 'a', 'a' }
             };
             foo.FindWords(board, new string[] { "aba","baa","bab","aaab","aaa","aaaa","aaba"}).Show();
+        }
+
+        static void Week08() {
+            var foo = new week08.Solution();
+            // 51. N-Queens
+            foo.SolveNQueens(8)?.Show();
         }
     }
 }
