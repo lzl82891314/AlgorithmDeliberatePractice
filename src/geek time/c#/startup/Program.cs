@@ -216,6 +216,9 @@ namespace startup {
                 new char[] { 'a', 'a' }
             };
             foo.FindWords(board, new string[] { "aba","baa","bab","aaab","aaa","aaaa","aaba"}).Show();
+
+            // 127.Word Ladder
+            foo.LadderLength("hit", "cog", new List<string>() { "hot", "dot", "dog", "lot", "log" });
         }
 
         static void Week08() {
