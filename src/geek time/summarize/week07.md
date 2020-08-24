@@ -75,7 +75,41 @@ public class Trie {
 }
 ```
 
-Trie树的主要题目就是[212. 单词搜索 II](https://leetcode-cn.com/problems/word-search-ii/)，这个题目中，需要创建Trie树来索引每个单词的startWith部分，从而加快搜索速度。其次主要逻辑使用DFS完成即可。
+Trie树的主要题目就是[212. 单词搜索 II](https://leetcode-cn.com/problems/word-search-ii/)，这个题目中，需要创建Trie树来索引每个单词的startWith部分，从而加快搜索速度。其次主要逻辑使用DFS完成即可。因此主要解题思路以及伪代码如下：
+
+``` C#
+public IList<string> FindWords(char[][] board, string[] words) {
+    // 通过单词列表构建Trie树
+    var trie = new Trie();
+    foreach (var word in words)
+        trie.Insert(word);
+    
+    // 然后以每个单词为起点做带回溯的DFS
+    for (var i = 0; i < board.Length; i++) {
+        for (var j = 0; j < board[0].Length; j++) {
+            BackTracking(board, i, j, "", new HashSet<string>());
+        }
+    }
+}
+
+private void BackTracking(char[][] board, int x, int y, string current, HashSet<string> visited) {
+    current += board[x][y];
+    if (!trie.StartWith(current)) return;
+    visited.Add(x + "_" + y);
+    if (trie.Search(current)) ans.Add(current);
+    for (var i = 0; i < directionX.Length; i++) {
+        var newX = x + directionX[i]; var newY = y + directionY[i];
+        var key = newX + "_" + newY;
+        if (newX >= 0 && newX < board.Length && newY >= 0 && newY < board[0].Length && !visited.Contains(key)) {
+            visited.Add(key);
+            BackTracking(board, newX, newY, current, visited);
+            visited.Remove(key);
+        }
+    }
+}
+```
+
+从上述的计算逻辑可以得出，使用Trie树 + BackTracking的方式解题的时间复杂度为：O(n^2 * mn)， 其中的n是board的行数，m是列数。
 
 ### 并查集
 
