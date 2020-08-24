@@ -109,7 +109,7 @@ private void BackTracking(char[][] board, int x, int y, string current, HashSet<
 }
 ```
 
-从上述的计算逻辑可以得出，使用Trie树 + BackTracking的方式解题的时间复杂度为：O(n^2 * mn)， 其中的n是board的行数，m是列数。
+从上述的计算逻辑可以得出，使用Trie树 + BackTracking的方式解题的时间复杂度为：O(m^2*n^2)， 其中的n是board的行数，m是列数。
 
 ### 并查集
 
