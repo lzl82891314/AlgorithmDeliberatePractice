@@ -231,6 +231,9 @@ namespace startup {
             };
             foo.Solve(board_130);
             foo.Solve_UnionFind(board_130);
+
+            // 126. Word Ladder II
+            foo.FindLadders("hit", "cog", new List<string>() { "hot", "dot", "dog", "lot", "log", "cog" });
         }
 
         static void Week08() {
