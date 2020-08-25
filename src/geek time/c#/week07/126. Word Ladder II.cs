@@ -1,10 +1,6 @@
-﻿using Microsoft.VisualBasic;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Text;
-using System.Text.RegularExpressions;
 
 namespace week07 {
     public partial class Solution {
@@ -22,39 +18,33 @@ namespace week07 {
                 }
             }
             if (!flag) return ans;
-            var beginSet = new Dictionary<string, Node>() { { beginWord, new Node(beginWord) } };
-            var visited = new HashSet<string>() { beginWord };
+            var queue = new Queue<Node>();
+            queue.Enqueue(new Node(beginWord));
+            var visited = new HashSet<string>();
             var nodeList = new List<Node>();
             var minCount = int.MaxValue;
-            while (beginSet.Count > 0) {
-                var nextSet = new Dictionary<string, Node>();
-                foreach (var item in beginSet) {
-                    var current = item.Key;
-                    var node = item.Value;
-                    if (node.count > minCount) break;
-                    for (var i = 0; i < current.Length; i++) {
-                        var commonWord = current.Substring(0, i) + "*" + current.Substring(i + 1, current.Length - i - 1);
-                        if (!dict.ContainsKey(commonWord)) continue;
-                        var matchedList = dict[commonWord];
-                        foreach (var matchedWord in matchedList) {
-                            var preNode = new Node(node);
-                            if (matchedWord.Equals(endWord)) {
-                                var curNode = new Node(matchedWord, preNode);
-                                preNode.next = curNode;
-                                minCount = Math.Min(minCount, curNode.count);
-                                nodeList.Add(curNode);
-                                visited.Add(matchedWord);
-                                continue;
-                            }
-                            if (visited.Contains(matchedWord)) continue;
-                            var nextNode = new Node(matchedWord, preNode);
-                            preNode.next = nextNode;
-                            nextSet[matchedWord] = nextNode;
-                            visited.Add(matchedWord);
+            while (queue.Count > 0) {
+                var node = queue.Dequeue();
+                visited.Add(node.val);
+                for (var i = 0; i < node.val.Length; i++) {
+                    var commonWord = node.val.Substring(0, i) + "*" + node.val.Substring(i + 1, node.val.Length - i - 1);
+                    if (!dict.ContainsKey(commonWord)) continue;
+                    var matchedList = dict[commonWord];
+                    foreach (var matchedWord in matchedList) {
+                        var preNode = new Node(node);
+                        if (matchedWord.Equals(endWord)) {
+                            var curNode = new Node(matchedWord, preNode);
+                            preNode.next = curNode;
+                            minCount = Math.Min(minCount, curNode.count);
+                            nodeList.Add(curNode);
+                            continue;
                         }
+                        if (visited.Contains(matchedWord)) continue;
+                        var nextNode = new Node(matchedWord, preNode);
+                        preNode.next = nextNode;
+                        queue.Enqueue(nextNode);
                     }
                 }
-                beginSet = nextSet;
             }
             if (nodeList.Count > 0) {
                 foreach (var node in nodeList) {

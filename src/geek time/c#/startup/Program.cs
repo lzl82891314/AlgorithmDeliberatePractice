@@ -233,7 +233,7 @@ namespace startup {
             foo.Solve_UnionFind(board_130);
 
             // 126. Word Ladder II
-            foo.FindLadders("hit", "cog", new List<string>() { "hot", "dot", "dog", "lot", "log", "cog" });
+            foo.FindLadders("red", "tax", new List<string>() { "ted","tex","red","tax","tad","den","rex","pee" });
         }
 
         static void Week08() {
