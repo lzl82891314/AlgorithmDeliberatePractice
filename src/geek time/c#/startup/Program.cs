@@ -219,6 +219,18 @@ namespace startup {
 
             // 127.Word Ladder
             foo.LadderLength("hit", "cog", new List<string>() { "hot", "dot", "dog", "lot", "log" });
+
+            // 130. Surrounded Regions
+            var board_130 = new char[][] {
+                new char[] { 'X', 'O', 'X', 'X' },
+                new char[] { 'O', 'X', 'O', 'X' },
+                new char[] { 'X', 'O', 'X', 'O' },
+                new char[] { 'O', 'X', 'O', 'X' },
+                new char[] { 'X', 'O', 'X', 'O' },
+                new char[] { 'O', 'X', 'O', 'X' },
+            };
+            foo.Solve(board_130);
+            foo.Solve_UnionFind(board_130);
         }
 
         static void Week08() {
