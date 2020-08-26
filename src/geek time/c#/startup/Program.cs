@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using week04;
+using week07;
 using static week03.Solution;
 
 namespace startup {
@@ -87,7 +88,7 @@ namespace startup {
             // foo.MaxSlidingWindow(new int[] { 1, -1 }, 1).Show<int>();
 
             // 49. Group Anagrams
-            foo.GroupAnagrams(new string[]{ "eat","tea","tan","ate","nat","bat" });
+            foo.GroupAnagrams(new string[] { "eat", "tea", "tan", "ate", "nat", "bat" });
         }
 
         static void Week03() {
@@ -102,7 +103,7 @@ namespace startup {
             foo.MinDepth(tree_111).Show();
 
             // 18. 4Sum
-            foo.FourSum(new int[]{1, 0, -1, 0, -2, 2}, 0);
+            foo.FourSum(new int[] { 1, 0, -1, 0, -2, 2 }, 0);
 
             // 297. Serialize and Deserialize Binary Tree
             foo.Serialize(new TreeNode(1, new TreeNode(2), new TreeNode(3, new TreeNode(4), new TreeNode(5)))).Show();
@@ -111,10 +112,10 @@ namespace startup {
             foo.Combine(4, 2).Show();
 
             // 46. Permutations
-            foo.Permute(new int[] {1, 2, 3}).Show();
+            foo.Permute(new int[] { 1, 2, 3 }).Show();
 
             // 47. Permutations II
-            foo.PermuteUnique(new int[] {1, 1, 2}).Show();
+            foo.PermuteUnique(new int[] { 1, 1, 2 }).Show();
 
             // 17. Letter Combinations of a Phone Number
             foo.LetterCombinations("23").Show();
@@ -127,7 +128,7 @@ namespace startup {
             foo.IsPerfectSquare(1024).Show();
 
             // 寻找部分有序数组的分界点
-            foo.FindIndex(new int[] {3, 4, 5, 1, 2}).Show();
+            foo.FindIndex(new int[] { 3, 4, 5, 1, 2 }).Show();
 
             // 127. Word Ladder
             foo.LadderLength("hit", "cog", new string[] { "hot", "dot", "dog", "lot", "log", "cog" }).Show();
@@ -167,7 +168,7 @@ namespace startup {
         static void Week06() {
             var foo = new week06.Solution();
             // 322. Coin Change
-            foo.CoinChange(new int[] { 1, 2, 5}, 11).Show();
+            foo.CoinChange(new int[] { 1, 2, 5 }, 11).Show();
 
             // 1143. Longest Common Subsequence
             foo.LongestCommonSubsequence("bl", "yby").Show();
@@ -181,7 +182,7 @@ namespace startup {
             // foo.IsMatch("mississippi", "mis*is*p*.").Show();
 
             // 213. House Robber II
-            foo.Rob_II(new int[] { 2, 7, 9, 3, 1});
+            foo.Rob_II(new int[] { 2, 7, 9, 3, 1 });
 
             // 152. Maximum Product Subarray
             foo.MaxProduct(new int[] { 2, 3, -2, 4 }).Show();
@@ -215,7 +216,7 @@ namespace startup {
                 new char[] { 'a', 'b'},
                 new char[] { 'a', 'a' }
             };
-            foo.FindWords(board, new string[] { "aba","baa","bab","aaab","aaa","aaaa","aaba"}).Show();
+            foo.FindWords(board, new string[] { "aba", "baa", "bab", "aaab", "aaa", "aaaa", "aaba" }).Show();
 
             // 127.Word Ladder
             foo.LadderLength("hit", "cog", new List<string>() { "hot", "dot", "dog", "lot", "log" });
@@ -233,7 +234,32 @@ namespace startup {
             foo.Solve_UnionFind(board_130);
 
             // 126. Word Ladder II
-            foo.FindLadders("red", "tax", new List<string>() { "ted","tex","red","tax","tad","den","rex","pee" });
+            var testData = new List<string>() {
+                "flail", "halon", "lexus", "joint", "pears", "slabs", "lorie", "lapse", "wroth", "yalow", "swear",
+                "cavil", "piety", "yogis", "dhaka", "laxer", "tatum", "provo", "truss", "tends", "deana", "dried",
+                "hutch", "basho", "flyby", "miler", "fries", "floes", "lingo", "wider", "scary", "marks", "perry",
+                "igloo", "melts", "lanny", "satan", "foamy", "perks", "denim", "plugs", "cloak", "cyril", "women",
+                "issue", "rocky", "marry", "trash", "merry", "topic", "hicks", "dicky", "prado", "casio", "lapel",
+                "diane", "serer", "paige", "parry", "elope", "balds", "dated", "copra", "earth", "marty", "slake",
+                "balms", "daryl", "loves", "civet", "sweat", "daley", "touch", "maria", "dacca", "muggy", "chore",
+                "felix", "ogled", "acids", "terse", "cults", "darla", "snubs", "boats", "recta", "cohan", "purse",
+                "joist", "grosz", "sheri", "steam", "manic", "luisa", "gluts", "spits", "boxer", "abner", "cooke",
+                "scowl", "kenya", "hasps", "roger", "edwin", "black", "terns", "folks", "demur", "dingo", "party",
+                "brian", "numbs", "forgo", "gunny", "waled", "bucks", "titan", "ruffs", "pizza", "ravel", "poole",
+                "suits", "stoic", "segre", "white", "lemur", "belts", "scums", "parks", "gusts", "ozark", "umped",
+                "heard", "lorna", "emile", "orbit", "onset", "cruet", "amiss", "fumed", "gelds", "italy", "rakes",
+                "loxed", "kilts", "mania", "tombs", "gaped", "merge", "molar", "smith", "tangs", "misty", "wefts",
+                "yawns", "smile", "scuff", "width", "paris", "coded", "sodom", "shits", "benny", "pudgy", "mayer",
+                "peary", "curve", "tulsa", "ramos", "thick", "dogie", "gourd", "strop", "ahmad", "clove", "tract",
+                "calyx", "maris", "wants", "lipid", "pearl", "maybe", "banjo", "south", "blend", "diana", "lanai",
+                "waged", "shari", "magic", "duchy", "decca", "wried", "maine", "nutty", "turns", "satyr", "holds",
+                "finks", "twits", "peaks", "teems", "peace", "melon", "czars", "robby", "tabby", "shove", "minty",
+                "marta", "dregs", "lacks", "casts", "aruba", "stall", "nurse", "jewry", "knuth"
+            };
+            // foo.FindLadders_DoubleEndedBFS("magic", "pearl", testData);
+            // foo.FindLadders_DoubleEndedBFS("a", "c", new string[] { "a", "b", "c" });
+            foo.FindLadders_DoubleEndedBFS("sand", "acne", TestData.GetData_126());
+
         }
 
         static void Week08() {
