@@ -15,8 +15,8 @@ namespace startup {
             // Week04();
             // Week05();
             // Week06();
-            // Week07();
-            Week08();
+            Week07();
+            // Week08();
         }
 
         static void Week01() {
@@ -258,7 +258,10 @@ namespace startup {
             };
             // foo.FindLadders_DoubleEndedBFS("magic", "pearl", testData);
             // foo.FindLadders_DoubleEndedBFS("a", "c", new string[] { "a", "b", "c" });
-            foo.FindLadders_DoubleEndedBFS("sand", "acne", TestData.GetData_126());
+            // foo.FindLadders_DoubleEndedBFS("sand", "acne", TestData.GetData_126());
+
+            // 433. Minimum Genetic Mutation
+            foo.MinMutation("AACCTTGG", "AATTCCGG", new string[] { "AATTCCGG", "AACCTGGG", "AACCCCGG", "AACCTACC" });
 
         }
 
