@@ -262,7 +262,6 @@ namespace startup {
 
             // 433. Minimum Genetic Mutation
             foo.MinMutation("AACCTTGG", "AATTCCGG", new string[] { "AATTCCGG", "AACCTGGG", "AACCCCGG", "AACCTACC" });
-
         }
 
         static void Week08() {
