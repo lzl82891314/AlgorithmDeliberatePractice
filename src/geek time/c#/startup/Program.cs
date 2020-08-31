@@ -15,8 +15,9 @@ namespace startup {
             // Week04();
             // Week05();
             // Week06();
-            Week07();
-            // Week08();
+            // Week07();
+            Week08();
+            // Week09();
         }
 
         static void Week01() {
@@ -271,6 +272,15 @@ namespace startup {
 
             // 491. Increasing Subsequences
             foo.FindSubsequences(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 1, 1, 1, 1 });
+
+            // 718. Maximum Length of Repeated Subarray
+            foo.FindLength(new int[] { 0, 0, 0, 0, 1 }, new int[] { 1, 0, 0, 0, 0 });
+        }
+
+        static void Week09() {
+            var foo = new week09.Solution();
+            // 387. First Unique Character in a String
+            foo.FirstUniqChar("loveleetcode");
         }
     }
 }
