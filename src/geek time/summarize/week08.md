@@ -22,7 +22,7 @@
 12. x & ((1 << n) - 1) 将x最高位至第n位（含）清零
 13. x % 2 == 1 => x & 1 == 1 判断奇数，同理可得 x & 1 == 0 判断偶数
 14. x >> 1 => x / 2，同理可得 mid = (left + right) / 2 => mid = (left + right) >> 1
-15. x = x & (x - 1)清零最低位的1
+15. x = x & (x - 1) => 清零最低位的1
 16. x & -x => 得到最低位的1
 
 有了以上的一些概念和知识点，位运算的题就可以做了。比较典型的是 [191. Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/)，计算给定二进制数的1的个数，这个题就可以用上述`第15个`特性解决：
@@ -42,9 +42,45 @@ public int HammingWeight(uint n) {
 
 ### 布隆过滤器
 
-布隆过滤器对我来说是一个全新的数据结构，因此我会详细总结一下布隆过滤器的一些细节知识点。
+布隆过滤器对我来说是一个全新的`数据结构`，其主要功能是可以`快速地判定一个值是否不存在`，其通过`向量 + 二进制数组`实现，主要原理是将一个值映射为多个哈希表中的向量存入哈希表中，当有一个数据进入时可以通过映射快速判断其是否在布隆过滤器中。其优点是`时间和空间复杂度远远高于一般算法`，但是也有相应的缺点就是`存在误识别率并且删除困难`。其主要的实现原理如下图所示：
 
 ![Bloom Filter Principle](https://github.com/lzl82891314/AlgorithmDeliberatePractice/blob/master/src/geek%20time/summarize/resource/bloom_filter.png)
+
+布隆过滤器只能`100%判定不存在`，而`判定存在则有一定误差`，其误差的大小主要依赖于映射函数的编写。其代码实现为：
+
+``` C#
+public class BloomFilter {
+    private BitArray bitArray;
+    private int size;
+    private int hashNum;
+
+    public BloomFilter(int size, int hashNum) {
+        this.size = size;
+        this.hashNum = hashNum;
+        this.bitArray = new BitArray(this.size);
+    }
+    public void Add(string data) {
+        for (var i = 1; i <= this.hashNum; i++) {
+            var result = Hash(data, i) % this.size;
+            this.bitArray[result] = true;
+        }
+    }
+    public string LookUp(string data) {
+        for (var i = 1; i <= this.hashNum; i++) {
+            var result = Hash(data, i) % this.size;
+            if (!this.bitArray[result]) return "Nope";
+        }
+        return "Probably";
+    }
+    private int Hash(string data, int seed) {
+        // to be implement ...
+        var code = 0;
+        return code;
+    }
+}
+```
+
+布隆过滤器的主要业务场景是可以在缓存之前再加一个布隆过滤器，这样当一个数据进入时就可以快速地判断这个值是否存在缓存中，从而加速缓存读取，也可以在分布式集群中作为资源的定位器。
 
 ### LRU Cache
 
