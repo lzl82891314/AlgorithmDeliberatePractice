@@ -44,7 +44,7 @@ public int HammingWeight(uint n) {
 
 布隆过滤器对我来说是一个全新的数据结构，因此我会详细总结一下布隆过滤器的一些细节知识点。
 
-![Bloom Filter Principle](https://github.com/lzl82891314/AlgorithmDeliberatePractice/blob/master/src/geek%20time/summarize/resource/bloom filter.png)
+![Bloom Filter Principle](https://github.com/lzl82891314/AlgorithmDeliberatePractice/blob/master/src/geek%20time/summarize/resource/bloom_filter.png)
 
 ### LRU Cache
 
