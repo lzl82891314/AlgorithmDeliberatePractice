@@ -275,6 +275,21 @@ namespace startup {
 
             // 718. Maximum Length of Repeated Subarray
             foo.FindLength(new int[] { 0, 0, 0, 0, 1 }, new int[] { 1, 0, 0, 0, 0 });
+
+            // Bubble Sort
+            var nums = new int[] { 3, 5, 2, 4, 1, 0 };
+            foo.BubblingSort(nums);
+            nums.Show<int>();
+
+            // SelectingSort Sort
+            nums = new int[] { 3, 5, 2, 4, 1, 0 };
+            foo.SelectingSort(nums);
+            nums.Show<int>();
+
+            // Inserting Sort
+            nums = new int[] { 3, 5, 2, 4, 1, 0 };
+            foo.InsertingSort(nums);
+            nums.Show<int>();
         }
 
         static void Week09() {
