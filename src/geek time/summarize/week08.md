@@ -164,8 +164,6 @@ public class LRU_Cache {
 
 ![Sorting Algorithm](https://github.com/lzl82891314/AlgorithmDeliberatePractice/blob/master/src/geek%20time/summarize/resource/sort.png)
 
-#### 初级排序算法
-
 初级排序算法主要有三个：`选择排序`、`插入排序`和`冒泡排序`，其代码实现如下：
 
 ``` C#
@@ -207,8 +205,6 @@ public void InsertingSort(int[] nums) {
 }
 ```
 
-#### 高级排序算法
-
 相较于初级排序算法，`快速排序`、`归并排序`和`堆排序`是三个高级排序算法，因为其时间复杂度升级到了`O(logn)`，其三种排序算法都使用到了分治的思想，将大问题简化最终合并求解。
 
-#### 线性排序算法
+此外，还有几种线性排序算法，其时间复杂度可以到`O(n)`级别，但是他们不是基于比较的排序算法，因此只能处理int等数字类型。常见的线性排序算法有`桶排序`、`计数排序`和`基数排序`。
