@@ -16,8 +16,8 @@ namespace startup {
             // Week05();
             // Week06();
             // Week07();
-            Week08();
-            // Week09();
+            // Week08();
+            Week09();
         }
 
         static void Week01() {
@@ -296,6 +296,9 @@ namespace startup {
             var foo = new week09.Solution();
             // 387. First Unique Character in a String
             foo.FirstUniqChar("loveleetcode");
+
+            // 300. Longest Increasing Subsequence
+            foo.LengthOfLIS(new int[] { 3, 5, 6, 2, 5, 4, 19, 5, 6, 7, 12 });
         }
     }
 }
