@@ -16,8 +16,8 @@ namespace startup {
             // Week05();
             // Week06();
             // Week07();
-            // Week08();
-            Week09();
+            Week08();
+            // Week09();
         }
 
         static void Week01() {
@@ -268,7 +268,7 @@ namespace startup {
         static void Week08() {
             var foo = new week08.Solution();
             // 51. N-Queens
-            foo.SolveNQueens(8)?.Show();
+            foo.SolveNQueens(4)?.Show();
 
             // 491. Increasing Subsequences
             foo.FindSubsequences(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 1, 1, 1, 1 });
