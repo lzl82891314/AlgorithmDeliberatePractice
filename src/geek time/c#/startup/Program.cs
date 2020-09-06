@@ -16,8 +16,8 @@ namespace startup {
             // Week05();
             // Week06();
             // Week07();
-            Week08();
-            // Week09();
+            // Week08();
+            Week09();
         }
 
         static void Week01() {
@@ -38,16 +38,13 @@ namespace startup {
             var pre = new int[] { 9, 9, 9, 9 };
             pre.Show<int>();
             foo.PlusOne(pre).Show<int>();
-
             // 283. Move Zeroes
             var movePre = new int[] { 0, 1, 0, 3, 12 };
             movePre.Show<int>();
             foo.MoveZeroes(movePre);
             movePre.Show<int>();
-
             // 11. Container With Most Water
             foo.MaxArea(new int[] { 1, 8, 6, 2, 5, 4, 8, 3, 7 }).Show();
-
             // 21. Merge Two Sorted Lists
             var l1 = new ListNode("[1,2,4]");
             var l2 = new ListNode("[1,3,4]");
@@ -299,6 +296,15 @@ namespace startup {
 
             // 300. Longest Increasing Subsequence
             foo.LengthOfLIS(new int[] { 3, 5, 6, 2, 5, 4, 19, 5, 6, 7, 12 });
+
+            // 125. Valid Palindrome
+            foo.IsPalindrome("A man, a plan, a canal: Panama").Show();
+
+            // 680. Valid Palindrome II
+            foo.ValidPalindrome("abcaba").Show();
+
+            // 32. Longest Valid Parentheses
+            foo.LongestValidParentheses("())").Show();
         }
     }
 }

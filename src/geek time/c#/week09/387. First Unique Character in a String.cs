@@ -5,13 +5,13 @@ using System.Text;
 namespace week09 {
     public partial class Solution {
         public int FirstUniqChar(string s) {
-            var vistited = new Dictionary<char, int>();
+            var visited = new Dictionary<char, int>();
             foreach (var ch in s) {
-                if (!vistited.ContainsKey(ch)) vistited[ch] = 0;
-                vistited[ch]++;
+                if (!visited.ContainsKey(ch)) visited[ch] = 0;
+                visited[ch]++;
             }
             for (var i = 0; i < s.Length; i++) {
-                if (vistited[s[i]] == 1) return i;
+                if (visited[s[i]] == 1) return i;
             }
             return -1;
         }
