@@ -17,7 +17,8 @@ namespace startup {
             // Week06();
             // Week07();
             // Week08();
-            Week09();
+            // Week09();
+            Week10();
         }
 
         static void Week01() {
@@ -305,6 +306,12 @@ namespace startup {
 
             // 32. Longest Valid Parentheses
             foo.LongestValidParentheses("())").Show();
+        }
+
+        static void Week10() {
+            var foo = new week10.Solution();
+            // 83. Remove Duplicates from Sorted List
+            foo.DeleteDuplicates(new ListNode("[1, 1, 2]"));
         }
     }
 }
