@@ -305,6 +305,14 @@ namespace startup {
 
             // 32. Longest Valid Parentheses
             foo.LongestValidParentheses("())").Show();
+
+            // 79. Word Search
+            var board = new char[][] {
+                new char[] { 'A', 'B', 'C', 'E' },
+                new char[] { 'S', 'F', 'C', 'S' },
+                new char[] { 'A', 'D', 'E', 'E' }
+            };
+            foo.Exist(board, "ABCCED").Show();
         }
     }
 }
