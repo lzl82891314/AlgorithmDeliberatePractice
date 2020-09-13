@@ -17,7 +17,8 @@ namespace startup {
             // Week06();
             // Week07();
             // Week08();
-            Week09();
+            // Week09();
+            Week10();
         }
 
         static void Week01() {
@@ -313,6 +314,18 @@ namespace startup {
                 new char[] { 'A', 'D', 'E', 'E' }
             };
             foo.Exist(board, "ABCCED").Show();
+        }
+
+        static void Week10() {
+            var foo = new week10.Solution();
+            // 83. Remove Duplicates from Sorted List
+            foo.DeleteDuplicates(new ListNode("[1, 1, 2]"));
+
+            // 347. Top K Frequent Elements
+            foo.TopKFrequent(new int[] { 1, 2, 2, 3, 4, 5, 5, 4, 4, 4, 5 }, 2).Show<int>();
+
+            // Largest Time for Given Digits
+            foo.LargestTimeFromDigits(new int[] { 0, 0, 0, 2 });
         }
     }
 }
