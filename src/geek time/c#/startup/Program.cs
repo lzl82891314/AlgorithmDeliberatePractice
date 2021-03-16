@@ -18,7 +18,8 @@ namespace startup {
             // Week07();
             // Week08();
             // Week09();
-            Week10();
+            // Week10();
+            Self_Practice();
         }
 
         static void Week01() {
@@ -326,6 +327,23 @@ namespace startup {
 
             // Largest Time for Given Digits
             foo.LargestTimeFromDigits(new int[] { 0, 0, 0, 2 });
+        }
+
+        static void Self_Practice()
+        {
+            var foo = new practice.Solution();
+            // foo.CheckPowersOfThree(1655720).Show();
+
+            // 54. Spiral Matrix
+            foo.SpiralOrder(new int[][]
+            {
+                new int[] { 1, 2, 3, 4 },
+                new int[] { 5, 6, 7, 8 },
+                new int[] { 9, 10, 11, 12 }
+            }).Show();
+
+            // 331. Verify Preorder Serialization of a Binary Tree
+            foo.IsValidSerialization("9,3,4,#,#,1,#,#,2,#,6,#,#").Show();
         }
     }
 }
