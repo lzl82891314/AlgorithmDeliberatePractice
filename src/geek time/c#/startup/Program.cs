@@ -344,6 +344,12 @@ namespace startup {
 
             // 331. Verify Preorder Serialization of a Binary Tree
             foo.IsValidSerialization("9,3,4,#,#,1,#,#,2,#,6,#,#").Show();
+
+            // 92. Reverse Linked List II
+            foo.ReverseBetween(new ListNode("[4,5]"), 1, 2).Show();
+
+            // 227. Basic Calculator II
+            foo.Calculate("13 + 20 * 02").Show();
         }
     }
 }
