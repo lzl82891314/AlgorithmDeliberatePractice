@@ -350,6 +350,9 @@ namespace startup {
 
             // 227. Basic Calculator II
             foo.Calculate("13 + 20 * 02").Show();
+
+            // 1047. Remove All Adjacent Duplicates In String
+            foo.RemoveDuplicates("abbaca");
         }
     }
 }
