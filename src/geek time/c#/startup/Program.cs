@@ -353,6 +353,12 @@ namespace startup {
 
             // 1047. Remove All Adjacent Duplicates In String
             foo.RemoveDuplicates("abbaca");
+
+            // 456. 132 Pattern
+            foo.Find132pattern(new int[] { 3, 5, 0, 3, 4 }).Show();
+
+            // 82.Remove Duplicates from Sorted List II
+            foo.DeleteDuplicates(new ListNode("[1,1,1,2,3,3,4,4,5,5,5,6]")).Show();
         }
     }
 }
