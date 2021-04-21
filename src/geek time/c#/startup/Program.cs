@@ -6,9 +6,12 @@ using week04;
 using week07;
 using static week03.Solution;
 
-namespace startup {
-    class Program {
-        static void Main(string[] args) {
+namespace startup
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
             // Week01();
             // Week02();
             // Week03();
@@ -19,10 +22,19 @@ namespace startup {
             // Week08();
             // Week09();
             // Week10();
-            Self_Practice();
+            // Self_Practice();
+            var heap = new CustomBinaryHeap(HeapType.Min, new int[] { 0, 0, 1, 2, 4, 2, 2, 3, 1, 4 });
+            for (var i = 0; i < 8; i++)
+            {
+                Console.WriteLine(heap.ToString());
+                heap.Remove();
+            }
+            Console.WriteLine(heap.ToString());
+            Console.ReadKey();
         }
 
-        static void Week01() {
+        static void Week01()
+        {
             var foo = new week01.Solution();
 
             // 15. 3Sum
@@ -82,7 +94,8 @@ namespace startup {
             foo.GetHint("1123", "0111").Show();
         }
 
-        static void Week02() {
+        static void Week02()
+        {
             var foo = new week02.Solution();
             // 239. Sliding Window Maximum
             // foo.MaxSlidingWindow(new int[] { 1, -1 }, 1).Show<int>();
@@ -91,7 +104,8 @@ namespace startup {
             foo.GroupAnagrams(new string[] { "eat", "tea", "tan", "ate", "nat", "bat" });
         }
 
-        static void Week03() {
+        static void Week03()
+        {
             var foo = new week03.Solution();
 
             // 98. Validate Binary Search Tree
@@ -121,7 +135,8 @@ namespace startup {
             foo.LetterCombinations("23").Show();
         }
 
-        static void Week04() {
+        static void Week04()
+        {
             var foo = new week04.Solution();
 
             // 367. Valid Perfect Square
@@ -160,12 +175,14 @@ namespace startup {
             new CodeBySlef().FindLadders("hit", "cog", new List<string>() { "hot", "dot", "dog", "lot", "log" }).Show();
         }
 
-        static void Week05() {
+        static void Week05()
+        {
             var foo = new week05.Solution();
             foo.LongestCommonSubsequence("oxcpqrsvwf", "shmtulqrypy").Show();
         }
 
-        static void Week06() {
+        static void Week06()
+        {
             var foo = new week06.Solution();
             // 322. Coin Change
             foo.CoinChange(new int[] { 1, 2, 5 }, 11).Show();
@@ -208,7 +225,8 @@ namespace startup {
             foo.MaximalSquare(charArr).Show();
         }
 
-        static void Week07() {
+        static void Week07()
+        {
             var foo = new week07.Solution();
 
             // 212. Word Search II
@@ -264,7 +282,8 @@ namespace startup {
             foo.MinMutation("AACCTTGG", "AATTCCGG", new string[] { "AATTCCGG", "AACCTGGG", "AACCCCGG", "AACCTACC" });
         }
 
-        static void Week08() {
+        static void Week08()
+        {
             var foo = new week08.Solution();
             // 51. N-Queens
             foo.SolveNQueens(4)?.Show();
@@ -291,7 +310,8 @@ namespace startup {
             nums.Show<int>();
         }
 
-        static void Week09() {
+        static void Week09()
+        {
             var foo = new week09.Solution();
             // 387. First Unique Character in a String
             foo.FirstUniqChar("loveleetcode");
@@ -317,7 +337,8 @@ namespace startup {
             foo.Exist(board, "ABCCED").Show();
         }
 
-        static void Week10() {
+        static void Week10()
+        {
             var foo = new week10.Solution();
             // 83. Remove Duplicates from Sorted List
             foo.DeleteDuplicates(new ListNode("[1, 1, 2]"));
@@ -359,6 +380,9 @@ namespace startup {
 
             // 82.Remove Duplicates from Sorted List II
             foo.DeleteDuplicates(new ListNode("[1,1,1,2,3,3,4,4,5,5,5,6]")).Show();
+
+            // 283. Move Zeros
+            foo.MoveZeroes(new int[] { 0, 1, 0, 3, 12 });
         }
     }
 }
