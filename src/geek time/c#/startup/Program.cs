@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using week04;
 using week07;
 using static week03.Solution;
+using practice;
 
 namespace startup
 {
@@ -22,14 +23,7 @@ namespace startup
             // Week08();
             // Week09();
             // Week10();
-            // Self_Practice();
-            var heap = new CustomBinaryHeap(HeapType.Min, new int[] { 0, 0, 1, 2, 4, 2, 2, 3, 1, 4 });
-            for (var i = 0; i < 8; i++)
-            {
-                Console.WriteLine(heap.ToString());
-                heap.Remove();
-            }
-            Console.WriteLine(heap.ToString());
+            Self_Practice();
             Console.ReadKey();
         }
 
@@ -383,6 +377,20 @@ namespace startup
 
             // 283. Move Zeros
             foo.MoveZeroes(new int[] { 0, 1, 0, 3, 12 });
+
+            // heap 
+            var heap = new CustomBinaryHeap(HeapType.Min, new int[] { 0, 0, 1, 2, 4, 2, 2, 3, 1, 4 });
+            for (var i = 0; i < 8; i++)
+            {
+                Console.WriteLine(heap.ToString());
+                heap.Remove();
+            }
+            Console.WriteLine(heap.ToString());
+
+            // sort
+            var arr = new int[] { 3, 1, 5, 10, 7, 6, 2 };
+            arr.QuickSort(0, arr.Length - 1);
+            Console.WriteLine();
         }
     }
 }
