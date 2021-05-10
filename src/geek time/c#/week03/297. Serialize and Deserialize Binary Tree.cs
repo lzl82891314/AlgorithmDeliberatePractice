@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using System.Collections.Generic;
+using common;
 
 namespace week03 {
     public partial class Solution {

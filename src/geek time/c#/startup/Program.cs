@@ -391,6 +391,21 @@ namespace startup
             var arr = new int[] { 3, 1, 5, 10, 7, 6, 2 };
             arr.QuickSort(0, arr.Length - 1);
             Console.WriteLine();
+
+            // 872. Leaf-Similar Trees
+            var root1 = new TreeNode()
+            {
+                left = new TreeNode(2),
+                right = new TreeNode(3),
+                val = 1
+            };
+            var root2 = new TreeNode()
+            {
+                left = new TreeNode(3),
+                right = new TreeNode(2),
+                val = 1
+            };
+            foo.LeafSimilar(root1, root2);
         }
     }
 }
